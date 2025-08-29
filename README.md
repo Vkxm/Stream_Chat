@@ -1,32 +1,31 @@
 ---
 # Stream Chat
-*Client (Mobile/Web App)*
+# Client (Mobile/Web App)
 
-* UI: React Native / Flutter
-* Chat encryption: libsignal / WebCrypto
-* File encryption: AES-256-GCM (client-side)
-* Progressive streaming: MediaSource API (Web) + native player (Mobile)
-* WebRTC: P2P calls/stream sync
+*   **UI:** React Native / Flutter
+*   **Chat encryption:** libsignal / WebCrypto
+*   **File encryption:** AES-256-GCM (client-side)
+*   **Progressive streaming:** MediaSource API (Web) + native player (Mobile)
+*   **WebRTC:** P2P calls/stream sync
 
-*Backend (Supabase / Node.js + Postgres)*
+# Backend (Supabase / Node.js + Postgres)
 
-* Auth service (JWT + refresh tokens)
-* Chatroom metadata store (rooms, members, keys)
-* File metadata store (filename, encrypted key, expiry, storage path)
-* Pre-signed short TTL links for downloads
-* Admin dashboard (reports, takedowns)
+*   **Auth service:** JWT + refresh tokens
+*   **Chatroom metadata store:** rooms, members, keys
+*   **File metadata store:** filename, encrypted key, expiry, storage path
+*   Pre-signed short TTL links for downloads
+*   **Admin dashboard:** reports, takedowns
 
-*Storage Layer*
+# Storage Layer
 
-* S3-compatible storage (Wasabi/Backblaze/S3)
-* File chunks encrypted client-side before upload
+*   S3-compatible storage (Wasabi/Backblaze/S3)
+*   File chunks encrypted client-side before upload
 
-*Streaming Infra*
+# Streaming Infra
 
-* WebRTC P2P mesh (small groups ≤4 users)
-* TURN server (Coturn) for NAT traversal
-* Optional SFU (mediasoup/LiveKit) for larger groups
-
+*   WebRTC P2P mesh (small groups ≤4 users)
+*   **TURN server:** Coturn for NAT traversal
+*   **Optional SFU:** mediasoup/LiveKit for larger groups
 ---
 
 ## 2. *Data Flow*
