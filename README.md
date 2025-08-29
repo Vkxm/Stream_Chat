@@ -1,7 +1,6 @@
 ---
 # Stream Chat
 # Client (Mobile/Web App)
-
 *   **UI:** React Native / Flutter
 *   **Chat encryption:** libsignal / WebCrypto
 *   **File encryption:** AES-256-GCM (client-side)
